@@ -1,6 +1,6 @@
 'use strict';
 const os = require('os');
-const APP_NAME = 'pipeline-worker-2ec0cb';
+const APP_NAME = 'pipeline-worker-f8c76e';
 const VERSION = '1.0.0';
 class UpipelineUworkerHandler {
   constructor(options = {}) {

